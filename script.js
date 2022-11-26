@@ -2,24 +2,24 @@ const container = document.querySelector('.container');
 
 
 const resetBtn = document.querySelector('#resetBtn');
-const btn16 = document.querySelector('.btn.one');
-const btn64 = document.querySelector('.btn.two');
-const btn256 = document.querySelector('.btn.three');
+const btn1 = document.querySelector('.btn.one');
+const btn2 = document.querySelector('.btn.two');
+const btn3 = document.querySelector('.btn.three');
 
 resetBtn.addEventListener('click', function() {
     deleteGrid();
 });
-btn16.addEventListener('click', function() {
-    deleteGrid();
-    setGridSize(16);
-});
-btn64.addEventListener('click', function() {
-    deleteGrid();
-    setGridSize(64);
-});
-btn256.addEventListener('click', function() {
+btn1.addEventListener('click', function() {
     deleteGrid();
     setGridSize(256);
+});
+btn2.addEventListener('click', function() {
+    deleteGrid();
+    setGridSize(1024);
+});
+btn3.addEventListener('click', function() {
+    deleteGrid();
+    setGridSize(4096);
 });
 
 function setGridSize(gridSize) {
@@ -33,6 +33,7 @@ function setGridSize(gridSize) {
         pixel.setAttribute('class', 'pixel');
         pixel.style.width = pixelDim + "%";
         pixel.style.height = pixelDim + "%";
+        pixel.addEventListener('mouseover', changePixelColour)
     }
 };
 
@@ -42,4 +43,10 @@ function deleteGrid() {
     }
 };
 
+function clearGrid() {
+    
+}
 
+function changePixelColour(e) {
+    e.target.style.backgroundColor = '#000000'
+};
