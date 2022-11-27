@@ -1,3 +1,8 @@
+//goals
+//create a button that can turn the cursor into an eraser
+//create a button that can clear the pixels
+//create a button to have the colours randomly change
+
 const container = document.querySelector('.container');
 
 
