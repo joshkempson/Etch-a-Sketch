@@ -1,11 +1,60 @@
+body {
+    background: linear-gradient(-45deg, #e2592f, #dd1964, #0faee7, #16d861);
+    background-size: 400% 400%;
+    animation: backgroundGradient 15s ease infinite;
+}
+
+@keyframes backgroundGradient {
+    0% {
+      background-position: 0% 0%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 0%;
+    }
+}
+
+#section1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
 .container {
-    border: 3px solid black;
-    width: 800px;
-    height: 800px;
+    width: 90%;
+    max-width: 800px;
+    height: auto;
+    aspect-ratio: 1;
     display: flex;
     flex-wrap: wrap;
+    padding-bottom: 20px;
 }
 
 .pixel {
     background: #fff;
 }
+
+.pixel:hover {
+    cursor: crosshair;
+}
+
+.btn {
+    -webkit-border-radius: 8;
+    -moz-border-radius: 8;
+    border-radius: 8px;
+    font-family: Arial;
+    color: #000000;
+    font-size: 20px;
+    background: #ffffff;
+    padding: 14px 24px 14px 24px;
+    border: solid #000000 4px;
+    text-decoration: none;
+  }
+  
+  .btn:hover {
+    background: #81bfe6;
+    text-decoration: none;
+  }

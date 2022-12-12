@@ -5,6 +5,7 @@
 
 const container = document.querySelector('.container');
 
+setGridSize(256);
 
 const resetBtn = document.querySelector('#resetBtn');
 const btn1 = document.querySelector('.btn.one');
@@ -12,7 +13,7 @@ const btn2 = document.querySelector('.btn.two');
 const btn3 = document.querySelector('.btn.three');
 
 resetBtn.addEventListener('click', function() {
-    deleteGrid();
+    clearGrid();
 });
 btn1.addEventListener('click', function() {
     deleteGrid();
@@ -49,8 +50,12 @@ function deleteGrid() {
 };
 
 function clearGrid() {
-    
+    let allCells = document.querySelectorAll(".pixel").forEach(cell => {
+        cell.style.backgroundColor = "white";
+    })
 }
+
+
 
 function changePixelColour(e) {
     e.target.style.backgroundColor = '#000000'
